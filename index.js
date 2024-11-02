@@ -12,9 +12,15 @@ const corsOptions = {
   optionsSuccessStatus: 200
 };
 
+
+
 mongoose.connect('mongodb+srv://isabelagiraldo01:isabella5127@cluster0.qplqh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',{})
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+app.get('/',(req,res) => {
+  res.send('back en linea')
+});
 
 app.use(cors(corsOptions));  // Aplica tus opciones de CORS correctamente
 
