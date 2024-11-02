@@ -26,7 +26,7 @@ app.use(cors(corsOptions));  // Aplica tus opciones de CORS correctamente
 
 app.use(express.json());
 
-app.use('http://localhost:4000/v1/drivers', router);
+app.use('/v1/drivers', router);
 
 mongoose.connect(process.env.DB, {
   useNewUrlParser: true,
